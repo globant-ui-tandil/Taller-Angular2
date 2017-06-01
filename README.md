@@ -1,187 +1,67 @@
-# Angular QuickStart Source
-[![Build Status][travis-badge]][travis-badge-url]
+# Angular 2 Taller
 
-This repository holds the TypeScript source code of the [angular.io quickstart](https://angular.io/docs/ts/latest/quickstart.html),
-the foundation for most of the documentation samples and potentially a good starting point for your application.
+Este repositorio contiene el código fuente TypeScript de [angular quickstart](https://github.com/angular/quickstart). Es la base para la creación de la aplicación que se realizará como parte del taller siguiendo como guía el video de [Angular 2 in 60 Minutes](https://www.youtube.com/watch?v=-zW1zHqsdyc).
 
-It's been extended with testing support so you can start writing tests immediately.
+## Requisitos antes de comenzar con el taller
+Mirar los siguientes videos en Acamica:
 
-**This is not the perfect arrangement for your application. It is not designed for production.
-It exists primarily to get you started quickly with learning and prototyping in Angular**
+- ¿Qué es TypeScript? Conoce sus ventajas: https://www.acamica.com/charlas/36/que-es-typescript-conoce-sus-ventajas
+- Fundamentos de ECMAScript 6 https://www.acamica.com/cursos/134/es6-inicial
 
-We are unlikely to accept suggestions about how to grow this QuickStart into something it is not.
-Please keep that in mind before posting issues and PRs.
 
-## Updating to a newer version of the Quickstart Repo
+## Configuración del entorno
+Node.js y npm son clave para desarrollar en Angular.
 
-From time to time the QuickStart will be enhanced with support for new features or to reflect
-changes to the [official Style Guide](https://angular.io/docs/ts/latest/guide/style-guide.html).
+1) Descargar e instalar [Node.js](https://nodejs.org/en/). Si ya lo tenes instalado verifica la version node `v4.x.x` o superior y npm `3.x.x` o superior. (Ejecutar `node -v` y `npm -v` en la terminal/consola window.)
 
-You can update your existing project to an up-to-date QuickStart by following these instructions:
-- Create a new project using the [instructions below](#create-a-new-project-based-on-the-quickstart)
-- Copy the code you have in your project's `main.ts` file onto `src/app/main.ts` in the new project
-- Copy your old `app` folder into `src/app`
-- Delete `src/app/main.ts` if you have one (we now use `src/main.ts` instead)
-- Copy your old `index.html`, `styles.css` and `tsconfig.json` into `src/`
-- Install all your third party dependencies
-- Copy your old `e2e/` folder into `e2e/`
-- Copy over any other files you added to your project
-- Copy your old `.git` folder into your new project's root
+2) Descargar e instalar [Git](https://git-scm.com/)
 
-Now you can continue working on the new project.
+3) Clonar este repositorio que esta basado en el quickstart de Angular.
+      
+      Pasos para clonar el repo:
+      
+      a) Click derecho en la carpeta que quieran clonar el repo y luego click en (GitBash Here), se va a abrir un bash de Git.
 
-## Prerequisites
+      b) Clonar el repo usando gitbash ```git clone https://github.com/globant-ui-tandil/Taller-Angular2.git myapp``` 
+       
+      c)  Una vez clonado, cambiar a la carpeta myapp. ```cd myapp``` 
 
-Node.js and npm are essential to Angular development. 
-    
-<a href="https://docs.npmjs.com/getting-started/installing-node" target="_blank" title="Installing Node.js and updating npm">
-Get it now</a> if it's not already installed on your machine.
- 
-**Verify that you are running at least node `v4.x.x` and npm `3.x.x`**
-by running `node -v` and `npm -v` in a terminal/console window.
-Older versions produce errors.
+      d) Finalmente ```npm install```
+  
 
-We recommend [nvm](https://github.com/creationix/nvm) for managing multiple versions of node and npm.
-
-## Create a new project based on the QuickStart
-
-Clone this repo into new project folder (e.g., `my-proj`).
-```shell
-git clone https://github.com/angular/quickstart  my-proj
-cd my-proj
-```
-
-We have no intention of updating the source on `angular/quickstart`.
-Discard the `.git` folder..
-```shell
-rm -rf .git  # OS/X (bash)
-rd .git /S/Q # windows
-```
-### Delete _non-essential_ files (optional)
-
-You can quickly delete the _non-essential_ files that concern testing and QuickStart repository maintenance
-(***including all git-related artifacts*** such as the `.git` folder and `.gitignore`!)
-by entering the following commands while in the project folder:
-
-##### OS/X (bash)
-```shell
-xargs rm -rf < non-essential-files.osx.txt
-rm src/app/*.spec*.ts
-rm non-essential-files.osx.txt
-```
-
-##### Windows
-```shell
-for /f %i in (non-essential-files.txt) do del %i /F /S /Q
-rd .git /s /q
-rd e2e /s /q
-```
-
-### Create a new git repo
-You could [start writing code](#start-development) now and throw it all away when you're done.
-If you'd rather preserve your work under source control, consider taking the following steps.
-
-Initialize this project as a *local git repo* and make the first commit:
-```shell
-git init
-git add .
-git commit -m "Initial commit"
-```
-
->Recover the deleted `.gitignore` from the QuickStart repository 
-if you lost it in the _Delete non-essential files_ step.
-
-Create a *remote repository* for this project on the service of your choice.
-
-Grab its address (e.g. *`https://github.com/<my-org>/my-proj.git`*) and push the *local repo* to the *remote*.
-```shell
-git remote add origin <repo-address>
-git push -u origin master
-```
-## Install npm packages
-
-> See npm and nvm version notes above
-
-Install the npm packages described in the `package.json` and verify that it works:
+## Ejecutar la aplicación
 
 ```shell
-npm install
 npm start
 ```
+## Mas comandos
+Para ver los posibles comandos a ejecutar, lee el README de https://github.com/angular/quickstart
 
->Doesn't work in _Bash for Windows_ which does not support servers as of January, 2017.
+## Qué aprenderás?
+- Cómo crear componentes
+- Cómo crear servicios
+- Cómo funciona el Data Binding
+- Forms & Input
+- Routing
+- Event Handling
 
-The `npm start` command first compiles the application, 
-then simultaneously re-compiles and runs the `lite-server`.
-Both the compiler and the server watch for file changes.
+## Empieza el Taller
+La dinámica de este taller es aprender Angular mirando un video y siguiendo los siguientes pasos:
 
-Shut it down manually with `Ctrl-C`.
+1) **Intro de angular y explicación del componente principal** Comienza a ver el video https://www.youtube.com/watch?v=-zW1zHqsdyc hasta el minuto 19.
+2) Abre el proyecto creado cuando seteaste el ambiente y modifica el componente principal (app.component.ts)
+3) **Crear nuevo componente**: Continuar viendo el video hasta el minuto 31.
+4) Práctica
+5) **Inputs y data binding:**  Continuar viendo el video hasta el minuto  39:10
+6) Práctica
+7) **Servicios y http module** Continuar viendo el video hasta el minuto 48:08. 
+8) Practica
+9) **Separar html a template**:  Continuar viendo el video hasta el minuto 50
+10) Práctica
+11) **Routing** Ver video hasta el final
 
-You're ready to write your application.
 
-### npm scripts
+## Links de Interés
 
-We've captured many of the most useful commands in npm scripts defined in the `package.json`:
-
-* `npm start` - runs the compiler and a server at the same time, both in "watch mode".
-* `npm run build` - runs the TypeScript compiler once.
-* `npm run build:w` - runs the TypeScript compiler in watch mode; the process keeps running, awaiting changes to TypeScript files and re-compiling when it sees them.
-* `npm run serve` - runs the [lite-server](https://www.npmjs.com/package/lite-server), a light-weight, static file server, written and maintained by
-[John Papa](https://github.com/johnpapa) and
-[Christopher Martin](https://github.com/cgmartin)
-with excellent support for Angular apps that use routing.
-
-Here are the test related scripts:
-* `npm test` - compiles, runs and watches the karma unit tests
-* `npm run e2e` - compiles and run protractor e2e tests, written in Typescript (*e2e-spec.ts)
-
-## Testing
-
-The QuickStart documentation doesn't discuss testing.
-This repo adds both karma/jasmine unit test and protractor end-to-end testing support.
-
-These tools are configured for specific conventions described below.
-
-*It is unwise and rarely possible to run the application, the unit tests, and the e2e tests at the same time.
-We recommend that you shut down one before starting another.*
-
-### Unit Tests
-TypeScript unit-tests are usually in the `src/app` folder. Their filenames must end in `.spec.ts`.
-
-Look for the example `src/app/app.component.spec.ts`.
-Add more `.spec.ts` files as you wish; we configured karma to find them.
-
-Run it with `npm test`
-
-That command first compiles the application, then simultaneously re-compiles and runs the karma test-runner.
-Both the compiler and the karma watch for (different) file changes.
-
-Shut it down manually with `Ctrl-C`.
-
-Test-runner output appears in the terminal window.
-We can update our app and our tests in real-time, keeping a weather eye on the console for broken tests.
-Karma is occasionally confused and it is often necessary to shut down its browser or even shut the command down (`Ctrl-C`) and
-restart it. No worries; it's pretty quick.
-
-### End-to-end (E2E) Tests
-
-E2E tests are in the `e2e` directory, side by side with the `src` folder.
-Their filenames must end in `.e2e-spec.ts`.
-
-Look for the example `e2e/app.e2e-spec.ts`.
-Add more `.e2e-spec.js` files as you wish (although one usually suffices for small projects);
-we configured Protractor to find them.
-
-Thereafter, run them with `npm run e2e`.
-
-That command first compiles, then simultaneously starts the `lite-server` at `localhost:8080`
-and launches Protractor.  
-
-The pass/fail test results appear at the bottom of the terminal window.
-A custom reporter (see `protractor.config.js`) generates a  `./_test-output/protractor-results.txt` file
-which is easier to read; this file is excluded from source control.
-
-Shut it down manually with `Ctrl-C`.
-
-[travis-badge]: https://travis-ci.org/angular/quickstart.svg?branch=master
-[travis-badge-url]: https://travis-ci.org/angular/quickstart
+* [Angular Style Guide](https://angular.io/styleguide)
+* [Documentación oficial de Angular](https://angular.io/)
